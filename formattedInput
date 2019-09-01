@@ -1,0 +1,8 @@
+[play] play
+[play] start
+
+[game] game
+[game] match
+[game] round
+
+PlayIntent [play] a [game]
