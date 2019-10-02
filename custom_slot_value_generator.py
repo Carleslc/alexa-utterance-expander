@@ -1,21 +1,21 @@
 import nltk
 
-#nltk.download('words')
-nltk.download('cess_esp')
-#nltk.download('brown')
+CORPUS = 'words' # cess_esp, brown
+
+nltk.download(CORPUS)
 
 import nltk.corpus
 from nltk.probability import FreqDist
 
 import json, random, string
 
-def get_random_words(n, corpus):
-  words_freqs = FreqDist(nltk.corpus.cess_esp.words()).most_common(n)
+def get_random_words(n):
+  words_freqs = FreqDist(getattr(nltk.corpus, CORPUS).words()).most_common(n)
   corpus_words = [wf[0] for wf in words_freqs]
   words = [w for w in corpus_words if w.isalpha()]
   return random.sample(words, len(words))
 
-words_list = [word.lower() for word in get_random_words(1000, 'cess_esp')]
+words_list = [word.lower() for word in get_random_words(1000)]
 
 words_list = list(set(words_list))
 

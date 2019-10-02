@@ -1,0 +1,497 @@
+{
+	"invocation": "aventuras interactivas",
+	"intents": [
+		{
+			"name": "PlayIntent",
+			"phrases": [
+				"{option}"
+			],
+			"inputs": [
+				{
+					"name": "option",
+					"type": {
+						"alexa": "CatchAll",
+						"dialogflow": "@sys.any"
+					}
+				}
+			]
+		},
+		{
+			"name": "NewAdventureIntent",
+			"phrases": [
+				"{new} {adventure}",
+				"{adventure} {new}",
+				"{want} {adventure} {new}",
+				"{want} {new} {adventure}",
+				"{play} {new} {adventure}",
+				"{play} una {new} {adventure}",
+				"{play} una {adventure} {new}",
+				"{play} un {new} {adventure}",
+				"{play} un {adventure} {new}",
+				"{want} una {new} {adventure}",
+				"{want} una {adventure} {new}",
+				"{want} un {new} {adventure}",
+				"{want} un {adventure} {new}",
+				"{want} {play} una {new} {adventure}",
+				"{want} {play} una {adventure} {new}",
+				"{want} {play} un {new} {adventure}",
+				"{want} {play} un {adventure} {new}"
+			],
+			"inputs": [
+				{
+					"name": "new",
+					"type": "New"
+				},
+				{
+					"name": "want",
+					"type": "Want"
+				},
+				{
+					"name": "play",
+					"type": "Play"
+				},
+				{
+					"name": "adventure",
+					"type": "Adventure"
+				}
+			]
+		},
+		{
+			"name": "ListAdventuresIntent",
+			"phrases": [
+				"{what} {adventures} {exist} disponibles",
+				"{what} {adventures} {exist} jugables",
+				"{what} {adventures} disponibles",
+				"{what} las {adventures} disponibles",
+				"{what} los {adventures} disponibles",
+				"{what} {adventures} jugables",
+				"{what} {adventures} {exist}",
+				"{what} {what} {adventures} {exist}",
+				"{what} {adventures}",
+				"{adventures} disponibles",
+				"{adventures} jugables",
+				"{adventures} para {play}",
+				"{adventures} que puedo {play}",
+				"{adventures} que pueda {play}",
+				"{adventures} que podamos {play}",
+				"{adventures} que se puedan {play}",
+				"{what} {adventures} puedo {play}",
+				"{what} {adventures} para {play}",
+				"{what} {adventures} {exist} para {play}",
+				"{what} {adventures} puedo {play}",
+				"{what} {adventures} se pueden {play}"
+			],
+			"inputs": [
+				{
+					"name": "what",
+					"type": "What"
+				},
+				{
+					"name": "play",
+					"type": "Play"
+				},
+				{
+					"name": "exist",
+					"type": "Exist"
+				},
+				{
+					"name": "adventures",
+					"type": "Adventure"
+				}
+			]
+		}
+	],
+	"inputTypes": [
+		{
+			"name": "CatchAll",
+			"values": [
+				{
+					"value": "hey hey hey"
+				},
+				{
+					"value": "hey hey"
+				},
+				{
+					"value": "hey"
+				}
+			]
+		},
+		{
+			"name": "Adventure",
+			"values": [
+				{
+					"value": "aventura",
+					"synonyms": [
+						"cuento",
+						"historia",
+						"juego"
+					]
+				},
+				{
+					"value": "aventuras",
+					"synonyms": [
+						"cuentos",
+						"historias",
+						"juegos"
+					]
+				}
+			]
+		},
+		{
+			"name": "New",
+			"values": [
+				{
+					"value": "nuevo",
+					"synonyms": [
+						"nueva"
+					]
+				},
+				{
+					"value": "otro",
+					"synonyms": [
+						"otra"
+					]
+				},
+				{
+					"value": "diferente",
+					"synonyms": [
+						"diferentes"
+					]
+				}
+			]
+		},
+		{
+			"name": "Want",
+			"values": [
+				{
+					"value": "quiero",
+					"synonyms": [
+						"yo quiero",
+						"yo"
+					]
+				},
+				{
+					"value": "elijo",
+					"synonyms": [
+						"yo elijo",
+						"escojo",
+						"yo escojo",
+						"selecciono"
+					]
+				}
+			]
+		},
+		{
+			"name": "Play",
+			"values": [
+				{
+					"value": "jugar",
+					"synonyms": [
+						"juega"
+					]
+				},
+				{
+					"value": "leer",
+					"synonyms": [
+						"lee"
+					]
+				},
+				{
+					"value": "escuchar"
+				},
+				{
+					"value": "reproducir",
+					"synonyms": [
+						"reproduce"
+					]
+				},
+				{
+					"value": "seleccionar",
+					"synonyms": [
+						"selecciona"
+					]
+				},
+				{
+					"value": "elegir",
+					"synonyms": [
+						"elige",
+						"escoger",
+						"escoge"
+					]
+				},
+				{
+					"value": "pon"
+				},
+				{
+					"value": "cambiar",
+					"synonyms": [
+						"cambia"
+					]
+				}
+			]
+		},
+		{
+			"name": "What",
+			"values": [
+				{
+					"value": "qué",
+					"synonyms": [
+						"que"
+					]
+				},
+				{
+					"value": "cuáles",
+					"synonyms": [
+						"cuales",
+						"cuáles son",
+						"cuales son"
+					]
+				},
+				{
+					"value": "mostrar",
+					"synonyms": [
+						"muestra",
+						"muéstrame"
+					]
+				},
+				{
+					"value": "dime"
+				}
+			]
+		},
+		{
+			"name": "Exist",
+			"values": [
+				{
+					"value": "existen"
+				},
+				{
+					"value": "hay"
+				},
+				{
+					"value": "tienen",
+					"synonyms": [
+						"tienes"
+					]
+				}
+			]
+		}
+	],
+	"alexa": {
+		"interactionModel": {
+			"languageModel": {
+				"intents": [
+					{
+						"name": "AMAZON.CancelIntent",
+						"samples": [
+							"cancelar",
+							"cancela",
+							"olvídalo",
+							"olvida eso"
+						]
+					},
+					{
+						"name": "AMAZON.PauseIntent",
+						"samples": [
+							"pausa la aventura",
+							"pausa la historia",
+							"pausar aventura",
+							"pausar historia",
+							"pausa el juego",
+							"pausar juego",
+							"pausar",
+							"pausa"
+						]
+					},
+					{
+						"name": "AMAZON.HelpIntent",
+						"samples": [
+							"cómo va esto",
+							"cómo se juega",
+							"cómo jugar",
+							"de qué va el juego",
+							"de qué va esto",
+							"información",
+							"no sé jugar",
+							"necesito ayuda",
+							"instrucciones",
+							"qué tengo que hacer",
+							"no sé qué hacer"
+						]
+					},
+					{
+						"name": "AMAZON.StopIntent",
+						"samples": [
+							"sal de la historia",
+							"salir de la historia",
+							"salir de la aventura",
+							"sal de la aventura",
+							"parar de jugar",
+							"calla",
+							"cállate",
+							"adiós",
+							"me tengo que ir",
+							"me voy",
+							"hasta luego",
+							"detente",
+							"detener",
+							"salir",
+							"apaga",
+							"apagar",
+							"ya basta",
+							"basta ya",
+							"ya para",
+							"para ya",
+							"ya vale",
+							"vale ya",
+							"no quiero jugar más",
+							"ya no quiero jugar más",
+							"me he cansado",
+							"me he cansado de jugar",
+							"ya me he cansado",
+							"ya me he cansado de jugar",
+							"sal del juego",
+							"salir del juego",
+							"quiero dejar de jugar",
+							"dejar de jugar"
+						]
+					},
+					{
+						"name": "AMAZON.NavigateHomeIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.RepeatIntent",
+						"samples": [
+							"puedes repetir",
+							"puedes repetir por favor",
+							"repite por favor",
+							"repítemelo",
+							"repítemelo por favor",
+							"repetición",
+							"no me he enterado",
+							"no he escuchado",
+							"no te he entendido",
+							"no he entendido",
+							"no entendí",
+							"no sé que has dicho",
+							"no sé que ha dicho",
+							"no escucho",
+							"no entiendo",
+							"vuelve a decirlo",
+							"puedes volver a decirlo",
+							"vuelve a decirlo por favor",
+							"puedes volver a decirlo por favor",
+							"puedes decirlo de nuevo",
+							"puedes decirlo de nuevo por favor",
+							"dilo de nuevo",
+							"dilo de nuevo por favor",
+							"reprodúcelo de nuevo",
+							"dilo otra vez",
+							"otra vez por favor",
+							"dilo otra vez por favor",
+							"repite de nuevo",
+							"repite de nuevo por favor",
+							"puedes volver a repetir",
+							"puedes volver a repetir por favor",
+							"vuelve a repetir",
+							"vuelve a repetir por favor",
+							"qué has dicho",
+							"qué dijiste"
+						]
+					},
+					{
+						"name": "AMAZON.StartOverIntent",
+						"samples": [
+							"volver al principio de la aventura",
+							"vuelve al principio de la aventura",
+							"comenzar la aventura de nuevo",
+							"volver a comenzar la aventura",
+							"volver a comenzar esta aventura",
+							"jugar otra vez esta aventura",
+							"volver a empezar la aventura",
+							"volver a empezar esta aventura",
+							"empezar la aventura de nuevo",
+							"empezar de nuevo la aventura",
+							"empezar de nuevo esta aventura",
+							"comenzar de nuevo la aventura",
+							"comenzar de nuevo esta aventura",
+							"quiero comenzar la aventura de nuevo",
+							"quiero volver a comenzar la aventura",
+							"quiero volver a comenzar esta aventura",
+							"quiero jugar otra vez esta aventura",
+							"quiero volver a empezar esta aventura",
+							"quiero empezar la aventura de nuevo",
+							"quiero empezar de nuevo la aventura",
+							"quiero empezar de nuevo esta aventura",
+							"quiero comenzar de nuevo la aventura",
+							"quiero comenzar de nuevo esta aventura",
+							"quiero jugar de nuevo",
+							"jugar de nuevo",
+							"jugar otra vez",
+							"vuelve al principio",
+							"volver al principio",
+							"vuelve a empezar",
+							"vuelve a comenzar",
+							"puedes volver a comenzar",
+							"puedes comenzar de nuevo",
+							"comienza de nuevo",
+							"empieza de nuevo",
+							"quiero empezar de nuevo",
+							"quiero comenzar de nuevo",
+							"quiero volver a comenzar",
+							"empezar de nuevo",
+							"comenzar de nuevo",
+							"volver a comenzar",
+							"volver a empezar",
+							"volver a jugar",
+							"quiero volver a jugar",
+							"quiero volver a empezar",
+							"puedes volver a empezar por favor",
+							"puedes volver a empezar",
+							"empezar desde el principio",
+							"comenzar desde el principio",
+							"empezar desde el inicio",
+							"comenzar desde el inicio",
+							"iniciar de nuevo",
+							"iniciar desde el principio",
+							"volver al inicio",
+							"vuelve al inicio"
+						]
+					},
+					{
+						"name": "AMAZON.YesIntent",
+						"samples": [
+							"sí por favor",
+							"claro que sí",
+							"pues claro",
+							"claro",
+							"por supuesto",
+							"dale",
+							"venga",
+							"vale",
+							"venga vale",
+							"aceptar",
+							"acepto",
+							"adelante",
+							"sí sí",
+							"si",
+							"ok"
+						]
+					},
+					{
+						"name": "AMAZON.NoIntent",
+						"samples": [
+							"mejor no",
+							"mejor que no",
+							"no gracias",
+							"no no",
+							"ahora no",
+							"ya no"
+						]
+					}
+				]
+			}
+		}
+	}
+}
